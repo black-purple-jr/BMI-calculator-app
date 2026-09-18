@@ -27,10 +27,6 @@ class MainActivity : AppCompatActivity() {
 
             var result: Float = weight / (height * height)
 
-            if (result < 18.5) {
-                txtresult.setText("Your BMI is : " + result + "\nCathegory : Underweight")
-            }
-
             when {
                 result < 18.5 -> txtresult.text = "Your BMI is: $result\nCategory: Underweight"
                 result < 25.0 -> txtresult.text = "Your BMI is: $result\nCategory: Normal weight"
@@ -38,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                 else -> txtresult.text = "Your BMI is: $result\nCategory: Obese"
             }
 
-
         }
+
     }
+
 }
