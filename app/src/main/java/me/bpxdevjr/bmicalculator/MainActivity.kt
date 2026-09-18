@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         var txtresult: TextView = findViewById(R.id.txtresult)
 
         btncalculate.setOnClickListener {
-            if (etweight.text.isEmpty() || etheight.text.isEmpty()) {
+            if (!etweight.text.isEmpty() && !etheight.text.isEmpty()) {
 
                 var weight: Float = etweight.text.toString().toFloat()
                 var height: Float = etheight.text.toString().toFloat() / 100
