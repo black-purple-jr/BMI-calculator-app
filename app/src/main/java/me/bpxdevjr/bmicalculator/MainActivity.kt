@@ -22,17 +22,26 @@ class MainActivity : AppCompatActivity() {
         var txtresult: TextView = findViewById(R.id.txtresult)
 
         btncalculate.setOnClickListener {
-            var weight: Float = etweight.text.toString().toFloat()
-            var height: Float = etheight.text.toString().toFloat() / 100
+            if (etweight.text.isEmpty() || etheight.text.isEmpty()) {
 
-            var result: Float = weight / (height * height)
+                var weight: Float = etweight.text.toString().toFloat()
+                var height: Float = etheight.text.toString().toFloat() / 100
 
-            when {
-                result < 18.5 -> txtresult.text = "Your BMI is: $result\nCategory: Underweight"
-                result < 25.0 -> txtresult.text = "Your BMI is: $result\nCategory: Normal weight"
-                result < 30.0 -> txtresult.text = "Your BMI is: $result\nCategory: Overweight"
-                else -> txtresult.text = "Your BMI is: $result\nCategory: Obese"
+                var result: Float = weight / (height * height)
+
+                when {
+                    result < 18.5 -> txtresult.text = "Your BMI is: $result\nCategory: Underweight"
+                    result < 25.0 -> txtresult.text =
+                        "Your BMI is: $result\nCategory: Normal weight"
+
+                    result < 30.0 -> txtresult.text = "Your BMI is: $result\nCategory: Overweight"
+                    else -> txtresult.text = "Your BMI is: $result\nCategory: Obese"
+                }
+            } else {
+
+                txtresult.text = "Please fill out the two fields with proper numbers"
             }
+
 
         }
 
