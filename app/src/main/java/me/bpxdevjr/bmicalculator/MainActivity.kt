@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         var txtresult: TextView = findViewById(R.id.txtresult)
 
         btncalculate.setOnClickListener {
-            if (!etweight.text.isEmpty() && !etheight.text.isEmpty()) {
+            if (!etweight.text.isEmpty() || !etheight.text.isEmpty()) {
 
                 var weight: Float = etweight.text.toString().toFloat()
                 var height: Float = etheight.text.toString().toFloat() / 100
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     else -> txtresult.text = "Your BMI is: $result\nCategory: Obese"
                 }
             } else {
-
+                
                 txtresult.text = "Please fill out the two fields with proper numbers"
             }
 
