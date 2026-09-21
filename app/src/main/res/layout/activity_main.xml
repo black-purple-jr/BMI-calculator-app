@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
-    tools:context=".MainActivity">
+    android:padding="16dp"
+    android:background="@color/background"
+
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
+        android:layout_marginTop="24dp"
         android:text="BMI Calculator"
-        android:textColor="#5b5eeb"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"
         android:textSize="28sp"
 
         />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Enter your weight"
-        android:textSize="16sp"
-
-        />
 
     <EditText
         android:id="@+id/etweight"
@@ -35,19 +29,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
+        android:inputType="numberDecimal"
         android:hint="Enter your weight (kg)"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:textColorHint="@color/darkGrey"
 
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:hint="Enter your height (cm)"
-        android:text="Enter you height"
-        android:textSize="16sp"
-
-        />
 
     <EditText
         android:id="@+id/etheight"
@@ -55,7 +45,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
+        android:inputType="numberDecimal"
         android:hint="Enter your height (cm)"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:textColorHint="@color/darkGrey"
 
         />
 
@@ -65,7 +60,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:text="Calculate"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="@color/buttonText"
+        android:padding="4dp"
+        android:layout_marginTop="8dp"
 
         />
 
@@ -74,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/black"
 
 
         />
