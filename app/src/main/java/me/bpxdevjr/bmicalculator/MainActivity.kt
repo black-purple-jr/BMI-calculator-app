@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     else -> txtresult.text = "Your BMI is: $result\nCategory: Obese"
                 }
             } else {
-                
+
                 txtresult.text = "Please fill out the two fields with proper numbers"
             }
 
