@@ -39,9 +39,8 @@ class MainActivity : AppCompatActivity() {
                 }
             } else {
 
-                txtresult.text = "Please fill out the two fields with proper numbers"
+                txtresult.text = "Please fill out these fields with proper numbers"
             }
-
 
         }
 
